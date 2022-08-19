@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+:root {
+  /*--Primary--*/
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  /*--Neutral--*/
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+  /*--Fonts--*/
+  --montserrat: 'Montserrat', sans-serif;
+  --fraunces: 'Fraunces', serif;
+}
+
+body {
+  background-color: var(--cream);
+  font-family: var(--montserrat);
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+.product-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 750px;
+  height: 550px;
+  border-radius: 15px;
+  background-color: var(--white);
+}
+
+/*---- Imagen del producto ----*/
+
+.product-img {
+  height: 550px;
+}
+
+.product-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+/*---- Texto del producto ----*/
+
+.text-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  color: var(--dark-grayish-blue);
+}
+
+.text-product p {
+  justify-items: stretch;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.text-product h1 {
+  color: var(--very-dark-blue);
+  font-family: var(--fraunces);
+  font-size: 50px;
+  justify-items: center;
+}
+
+.text-product span {
+  line-height: 1.5;
+}
+
+.price {
+  display: flex;
+  padding-right: 20px;
+  align-items: center;
+}
+
+.new-price {
+  font-family: var(--fraunces);
+  color: var(--dark-cyan);
+  font-size: 40px;
+}
+
+.price .old-price {
+  text-decoration:line-through;
+  letter-spacing: 0px;
+  align-self: center;
+  margin-left: 20px;
+}
+
+/*---- Boton del producto ----*/
+
+.add-cart-details {
+  width: 100%;
+  padding: 20px;
+  font-family: var(--montserrat);
+  font-size: 15px;
+  border-radius: 15px;
+  border: none;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  text-align:center;
+  cursor: pointer;
+}
+
+.add-cart-details:hover {
+  background-color: hsl(158, 50%, 24%);
+}
+
+.add-cart-details::before {
+  content: url(/images/icon-cart.svg);
+  margin-right: 10px;
+}
+
+
+/*---- Atribución ----*/
+
+.attribution { 
+  font-size: 11px;
+  text-align: center; 
+  position: absolute;
+  bottom: 0;
+  right: 40%;
+  margin-bottom: 10px;
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
